@@ -2,7 +2,6 @@ package dev.itboot.mb.controller;
 
 import java.util.List;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +21,7 @@ public class StaffController {
 
 	// mapperをserviceに変更
 	@GetMapping("/")
-	public List<Staff> getAllStaffs(Model model) {
+	public List<Staff> getAllStaffs() {
 		List<Staff> staff = service.selectAll();
 		return staff;
 	}
@@ -38,7 +37,7 @@ public class StaffController {
 	}
 
 	@GetMapping("/edit/{id}")
-	public Staff editStaff(@PathVariable Long id, Model model) {
+	public Staff editStaff(@PathVariable Long id) {
 		return service.selectByPrimaryKey(id);
 	}
 
