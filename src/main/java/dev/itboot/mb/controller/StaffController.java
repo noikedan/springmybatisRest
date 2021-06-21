@@ -34,8 +34,7 @@ public class StaffController {
 
 	@PutMapping("/complete")
 	public void put(@RequestBody Staff staff) {
-		Staff temp = new Staff(staff.getId(), staff.getName(), staff.getEmail());
-		service.save(temp);
+		service.save(staff);
 	}
 
 	@GetMapping("/edit/{id}")

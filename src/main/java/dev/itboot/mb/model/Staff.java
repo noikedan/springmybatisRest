@@ -19,12 +19,6 @@ public class Staff {
 		this.email = email;
 	}
 
-	public Staff(long id, String name, String email) {
-		this.id = id;
-		this.name = name;
-		this.email = email;
-	}
-
 	private Long id;
 
 	// Validationを追加
