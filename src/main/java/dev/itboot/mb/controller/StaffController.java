@@ -26,6 +26,11 @@ public class StaffController {
 		return staff;
 	}
 
+	@GetMapping("/edit/{id}")
+	public Staff editStaff(@PathVariable Long id) {
+		return service.selectByPrimaryKey(id);
+	}
+
 	@PostMapping("/add")
 	public void create(@RequestBody Staff staff) {
 		service.save(staff);
@@ -34,11 +39,6 @@ public class StaffController {
 	@PutMapping("/complete")
 	public void put(@RequestBody Staff staff) {
 		service.save(staff);
-	}
-
-	@GetMapping("/edit/{id}")
-	public Staff editStaff(@PathVariable Long id) {
-		return service.selectByPrimaryKey(id);
 	}
 
 	@GetMapping("/delete/{id}")
