@@ -1,4 +1,7 @@
 # springmybatisRest
-はまったところはStaffクラスの作り　　課題はPostmanなどのツール
+はまったところ  
+Staffクラスの作り  
+課題  
+Postmanなどのツール
 
 
